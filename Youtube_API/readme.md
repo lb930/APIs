@@ -14,19 +14,19 @@ Download and save Youtube_class.py. Create a script similar to main.py and store
 Channel IDs can be found in the Youtube channel URL, eg https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg.
 
 ```python
-    from Youtube_class import YTstats
+from Youtube_class import YTstats
 
-    key = 'your_API_key'
-    directory = 'directory to store json files'
+key = 'your_API_key'
+directory = 'directory to store json files'
 
-    # Channels you would like to track
-    channel_ids = ['UC4JX40jDee_tINbkjycV4Sg']
+# Channels you would like to track
+channel_ids = ['UC4JX40jDee_tINbkjycV4Sg']
 
-    for id in channel_ids:
-        yt = YTstats(key, id, directory)
-        yt.get_channel_title()
-        yt.get_channel_statistics()
-        yt.dump()    
+for id in channel_ids:
+    yt = YTstats(key, id, directory)
+    yt.get_channel_title()
+    yt.get_channel_statistics()
+    yt.dump()    
 ```
         
 This will create output a json file with the channel name and today's date as file name.
