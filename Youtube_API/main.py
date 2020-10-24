@@ -1,14 +1,14 @@
 from Youtube_class import YTstats
 
-key = 'your_API_key'
-directory = 'directory to store json files'
+key = 'you_API_key'
 
-# Channels you would like to track
-channel_ids = ['list of channel ids']
+# Channel IDs can be found in the URL of each Youtube channel
+channel_ids = ['some_channel', 'another_channel']
 
 for id in channel_ids:
-    yt = YTstats(key, id, directory)
+    yt = YTstats(key, id)
     yt.get_channel_title()
     yt.get_channel_statistics()
-    yt.dump()
+    yt.dump('Filepath for jsons')
+    yt.to_csv('File path for csv file')
     
