@@ -46,6 +46,7 @@ class YTstats:
 
         date_col = datetime.now()
         date_col = datetime.strftime(date_col, '%Y-%m-%d %H:%M:%S')
+        self.get_channel_title()
         channel = self.channel_name
         channel_id = self.channel_statistics['id']
         views = self.channel_statistics['statistics']['viewCount']
@@ -75,6 +76,7 @@ class YTstats:
         """
 
         today_date = str(date.today())
+        self.get_channel_title()
         channel = self.channel_name.replace(' ', '')
         filename = channel + '_' + today_date + '.json'
         with open(json_directory + filename, 'w') as f:
